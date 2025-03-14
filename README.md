@@ -16,3 +16,7 @@ I also made this library because executors refused to properly implement it.
 
 ### `getfunctionthreads(func): table`
 **How it works:** Gets the func's script via `getfenv(func).script` and calls `getscriptthreads(script)`.
+
+# Usage
+
+ `loadstring(game:HttpGet([[https://raw.githubusercontent.com/tip52/ThreadLib/refs/heads/main/main.lua]]))()`
