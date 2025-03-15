@@ -94,6 +94,10 @@ function ThreadLib.getfunctionthreads(func)
     return ThreadLib.getscriptthreads(script)
 end
 
+function ThreadLib.getthreadfunction(thread)
+    return debug.info(thread, 1, "f") or nil
+end
+
 if getgc then
     local threadfuncs = {}
     function ThreadLib.getthreadfunctions(thread)
@@ -118,5 +122,5 @@ end
 -- add to the environment
 
 for i, v in next, ThreadLib do
-    getfenv()[i] = v
+    getgenv()[i] = v
 end
