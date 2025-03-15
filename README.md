@@ -17,7 +17,7 @@ I also made this library because executors refused to properly implement it.
 ### `getfunctionthreads(func): table`
 **How it works:** Gets the func's script via `getfenv(func).script` and calls `getscriptthreads(script)`.
 
-### `getthreadfunctions(thread): table` (Added flag)
+### `getthreadfunctions(thread): table`
 **How it works:** Uses `getgc` to get all functions related to the thread's script.
 
 ### `gettenv(thread): table`
