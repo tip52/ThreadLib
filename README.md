@@ -17,6 +17,13 @@ I also made this library because executors refused to properly implement it.
 ### `getfunctionthreads(func): table`
 **How it works:** Gets the func's script via `getfenv(func).script` and calls `getscriptthreads(script)`.
 
+### `getthreadfunctions(thread): table` (Added flag)
+**How it works:** Uses `getgc` to get all functions related to the thread's script.
+
+### `gettenv(thread): table`
+**How it works:** Returns the environment of a given thread, containing `_G`, `shared`, and `script`. If `getgenv().overwrite_gettenv` is `true`, it will return a manually constructed environment.
+
 # Usage
 
  `loadstring(game:HttpGet([[https://raw.githubusercontent.com/tip52/ThreadLib/refs/heads/main/main.lua]]))()`
+
